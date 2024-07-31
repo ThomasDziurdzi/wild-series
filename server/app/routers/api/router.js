@@ -14,6 +14,11 @@ const { sayWelcome } = require("../../controllers/sayActions");
 router.get("/", sayWelcome);
 
 
+const categoriesRouter = require("./categories/router");
+
+router.use("/categories", categoriesRouter);
+
+
 const itemsRouter = require("./items/router");
 
 router.use("/items", itemsRouter);
