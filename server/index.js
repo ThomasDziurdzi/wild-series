@@ -13,9 +13,7 @@ const app = require("./app/config");
 const port = process.env.APP_PORT;
 
 
-app.get("/", (req,res) => {
-  res.status(200).send("Welcome to Wild Series !")
-})
+
 
 
 // Start the server and listen on the specified port
