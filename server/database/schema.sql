@@ -10,3 +10,22 @@ create table item (
   user_id int unsigned not null,
   foreign key(user_id) references user(id)
 );
+
+
+-- Ajout des table quête harmonia 5 --
+
+CREATE TABLE category (
+    id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE program (
+    id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    synopsis TEXT NOT NULL,
+    poster VARCHAR(255) NOT NULL,
+    country VARCHAR(255) NOT NULL,
+    year INT,
+    category_id INT unsigned not null,
+    FOREIGN KEY (category_id) REFERENCES category(id)
+);
